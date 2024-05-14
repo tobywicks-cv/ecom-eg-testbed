@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ecom_eg_testbed.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="EcomEgTestBed.Global" Language="C#" %>

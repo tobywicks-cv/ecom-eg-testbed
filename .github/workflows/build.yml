@@ -1,12 +1,10 @@
 name: ECOM Deploy
 on:
-
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
  
 jobs:
 
-  build-init:
+  deploy:
     runs-on: windows-latest
     steps:   
       - name: Hello

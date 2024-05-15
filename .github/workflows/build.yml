@@ -1,0 +1,13 @@
+name: ECOM Deploy
+on:
+
+  pull_request:
+    branches: [ "master" ]
+ 
+jobs:
+
+  build-init:
+    runs-on: windows-latest
+    steps:   
+      - name: Hello
+        run: echo hello

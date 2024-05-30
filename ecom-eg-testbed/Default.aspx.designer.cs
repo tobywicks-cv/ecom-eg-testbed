@@ -13,5 +13,23 @@ namespace EcomEgTestBed
 
     public partial class _Default
     {
+
+        /// <summary>
+        /// databaseconnectionstring control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox databaseconnectionstring;
+
+        /// <summary>
+        /// ConnectionOutcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ConnectionOutcome;
     }
 }

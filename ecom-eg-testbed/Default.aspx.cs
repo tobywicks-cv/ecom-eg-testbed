@@ -39,7 +39,7 @@ namespace EcomEgTestBed
                 builder.InitialCatalog = "cv-db-site-qa-eastau";
                 builder.UserID = "cv-admin";
                 builder.Password = "ek38ep2njAW%raJvzcK8*3";
-                builder.Authentication = SqlAuthenticationMethod.ActiveDirectoryPassword;
+                builder.Authentication = SqlAuthenticationMethod.SqlPassword;
                 //builder.Authentication = SqlAuthenticationMethod.ActiveDirectoryIntegrated;
                 builder.Encrypt = SqlConnectionEncryptOption.Optional;
                 builder.TrustServerCertificate = true;

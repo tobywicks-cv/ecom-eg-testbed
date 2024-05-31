@@ -8,6 +8,17 @@
             <p>
                 This is the ECOM EG test app.
             </p>
+                
+            <form>
+                <label>Database connection string:</label>
+                <asp:TextBox style="width: 75%" runat="server" ID="databaseconnectionstring" name="databaseconnectionstring" ></asp:TextBox>
+                <br/>
+                <button type="submit">Connect to DB</button>
+            </form>
+            
+            <p>
+                <asp:Label runat="server" ID="ConnectionOutcome"></asp:Label>
+            </p>
         </section>
     </main>
 

@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Source\ecom-eg-testbed\ecom-eg-testbed\app.publish</_PublishTargetUrl>
-    <History>True|2024-05-14T00:34:04.6051717Z;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
+    <History>True|2024-05-14T00:35:17.4277842Z;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -19,10 +19,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/16/2019 13:03:30</publishTime>
     </File>
     <File Include="bin/EcomEgTestBed.dll">
-      <publishTime>05/14/2024 10:34:04</publishTime>
+      <publishTime>05/14/2024 10:35:17</publishTime>
     </File>
     <File Include="bin/EcomEgTestBed.pdb">
-      <publishTime>05/14/2024 10:34:04</publishTime>
+      <publishTime>05/14/2024 10:35:17</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>07/30/2013 17:27:30</publishTime>
@@ -208,7 +208,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/14/2024 10:32:54</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/FolderProfile.pubxml.user">
-      <publishTime>05/14/2024 10:24:16</publishTime>
+      <publishTime>05/14/2024 10:34:04</publishTime>
     </File>
     <File Include="Site.Master">
       <publishTime>05/14/2024 10:19:35</publishTime>

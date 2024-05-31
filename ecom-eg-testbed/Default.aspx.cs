@@ -35,10 +35,10 @@ namespace EcomEgTestBed
             get
             {
                 var builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "server";
-                builder.InitialCatalog = "database";
-                builder.UserID = "userid";
-                builder.Password = "password";
+                builder.DataSource = "cv-sqls-site-qa-eastau.database.windows.net";
+                builder.InitialCatalog = "cv-db-site-qa-eastau";
+                builder.UserID = "cv-admin";
+                builder.Password = "ek38ep2njAW%raJvzcK8*3";
                 builder.Authentication = SqlAuthenticationMethod.ActiveDirectoryPassword;
                 //builder.Authentication = SqlAuthenticationMethod.ActiveDirectoryIntegrated;
                 builder.Encrypt = SqlConnectionEncryptOption.Optional;

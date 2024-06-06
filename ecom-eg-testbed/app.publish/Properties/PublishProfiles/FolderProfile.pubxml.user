@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Source\ecom-eg-testbed\ecom-eg-testbed\app.publish</_PublishTargetUrl>
-    <History>False|2024-06-06T06:18:18.0463186Z;True|2024-05-31T14:39:15.2726040+10:00;True|2024-05-14T10:35:17.4277842+10:00;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
+    <History>True|2024-06-06T06:18:50.2864045Z;False|2024-06-06T16:18:18.0463186+10:00;True|2024-05-31T14:39:15.2726040+10:00;True|2024-05-14T10:35:17.4277842+10:00;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>

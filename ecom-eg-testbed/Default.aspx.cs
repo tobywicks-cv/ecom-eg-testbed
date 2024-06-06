@@ -8,6 +8,10 @@ namespace EcomEgTestBed
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.hostLabel.Text = Request.Headers["Host"];
+            var xForwardedHost= Request.Headers["X-Forwarded-Host"];
+            this.forwardedHostLabel.Text = string.IsNullOrEmpty(xForwardedHost) ? "[blank]" : xForwardedHost;
+
             if (IsPostBack)
             {
                 var connectionString = databaseconnectionstring.Text;

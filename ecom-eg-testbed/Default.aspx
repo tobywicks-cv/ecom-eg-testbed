@@ -20,6 +20,10 @@
                         <th style="text-align: left">Value</th>
                     </tr>
                     <tr>
+                        <td><code>:authority:</code></td>
+                        <td><asp:Label ID="authority" runat="server" Text=""></asp:Label></td>
+                    </tr>
+                    <tr>
                         <td><code>x-forwarded-host</code></td>
                         <td><asp:Label ID="forwardedHostLabel" runat="server" Text=""></asp:Label></td>
                     </tr>

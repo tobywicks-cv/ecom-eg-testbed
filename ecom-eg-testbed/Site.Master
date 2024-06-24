@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EcomEgTestBed.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EcomEgTestBed.SiteMaster" EnableTheming="true" %>
 
 <!DOCTYPE html>
 
@@ -20,9 +20,15 @@
             font-style: normal;
         }
     </style>
+    
+    <asp:ContentPlaceHolder runat="server" ID="HeaderContent"></asp:ContentPlaceHolder>
 </head>
 
 <body>
+<nav>
+    <a href="~/Default.aspx" runat="server">Home</a>
+    <a href="~/TestFileShareConnectivity.aspx" runat="server">Azure File Store</a>
+</nav>
     <form runat="server">
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

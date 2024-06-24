@@ -1,0 +1,38 @@
+﻿/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the navigation bar */
+nav {
+    width: 100%;
+    background-color: #333; /* Dark background color */
+    overflow: hidden; /* Clear floats */
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+}
+
+    /* Style for the navigation links */
+    nav a {
+        float: left; /* Float links to the left */
+        display: block;
+        color: white; /* Text color */
+        text-align: center;
+        padding: 14px 16px; /* Spacing around the text */
+        text-decoration: none; /* Remove underline */
+        font-size: 17px; /* Font size */
+    }
+
+        /* Change the color on hover */
+        nav a:hover {
+            background-color: #575757; /* Slightly lighter background */
+            color: white;
+        }
+
+/* Additional styling for page content */
+.content {
+    padding-top: 60px; /* Space for the fixed navigation bar */
+}

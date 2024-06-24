@@ -1,4 +1,8 @@
-﻿<%@ Page Title="ECOM EG Testbed" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EcomEgTestBed._Default" %>
+﻿<%@ Page Title="ECOM EG Testbed" Language="C#" 
+MasterPageFile="~/Site.Master" 
+AutoEventWireup="true" 
+CodeBehind="Default.aspx.cs" 
+Inherits="EcomEgTestBed._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 

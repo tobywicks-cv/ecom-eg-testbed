@@ -57,7 +57,7 @@ namespace EcomEgTestBed
             ClearOutput();
             try
             {
-                string sharedFilePath = (sender  as Button).Text;
+                string sharedFilePath = (sender as Button).Text;
 
 
                 // Check if the file exists
@@ -122,10 +122,19 @@ namespace EcomEgTestBed
                 //the path
                 var combinedNetworkPath = GetFilePath();
 
+                if (!Directory.Exists(combinedNetworkPath))
+                {
+                    divError.InnerHtml = $"FAILURE to write: Network path does not exist";
+                    divError.Visible = true;
+                    return;
+                }
+
                 var filePath = combinedNetworkPath + @"\NetworkShare-" + DateTime.Now.ToString("dd-MMM-yyyy-HH-mm-ss") + ".txt";
 
                 File.WriteAllText(filePath,
                     $"{DateTime.Now.ToLongTimeString()} - Bob is bob");
+
+                btnGetFilesIn_Click(sender, e);
             }
             catch (Exception exception)
             {

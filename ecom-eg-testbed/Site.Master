@@ -27,7 +27,8 @@
 <body>
 <nav>
     <a href="~/Default.aspx" runat="server">Home</a>
-    <a href="~/TestFileShareConnectivity.aspx" runat="server">Azure File Store</a>
+    <%--<a href="~/TestFileShareConnectivity.aspx" runat="server">Azure File Store</a>--%>
+    <a href="~/MountAccessTests.aspx" runat="server">Mount Access</a>
 </nav>
     <form runat="server">
         <div class="container body-content">

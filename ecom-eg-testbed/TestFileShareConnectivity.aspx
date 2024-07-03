@@ -1,14 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"
+﻿<%@ Page Language="C#" 
+    AutoEventWireup="true"
     MasterPageFile="~/Site.Master"
     CodeBehind="TestFileShareConnectivity.aspx.cs"
     Inherits="EcomEgTestBed.TestFileShareConnectivity" %>
 
-<asp:Content runat="server" ContentPlaceHolderID="HeaderContent">
-    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<asp:Content runat="server" 
+             ContentPlaceHolderID="HeaderContent">
+    <link rel="stylesheet" 
+          href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 </asp:Content>
 
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" 
+             ContentPlaceHolderID="MainContent" 
+             runat="server">
 
     <div class="card" style="margin-top: 80px;">
         <div class="card-header bg-info text-white">

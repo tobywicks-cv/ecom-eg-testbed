@@ -220,6 +220,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="MountAccessTests.aspx" />
     <Content Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
     <Content Include="Redirect.aspx" />
     <Content Include="Site.Master" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MountAccessTests.aspx.cs">
+      <DependentUpon>MountAccessTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MountAccessTests.aspx.designer.cs">
+      <DependentUpon>MountAccessTests.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redirect.aspx.cs">
@@ -268,6 +276,7 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="readme.md" />
+    <None Include="Properties\PublishProfiles\site1instance1 - FTP.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

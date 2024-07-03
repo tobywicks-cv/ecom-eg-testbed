@@ -5,3 +5,4 @@ packages
 **/*.user
 
 !ecom-eg-testbed/app.publish/**
+/.idea

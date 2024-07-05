@@ -42,21 +42,102 @@ namespace EcomEgTestBed
         protected global::System.Web.UI.WebControls.Label hostLabel;
 
         /// <summary>
-        /// databaseconnectionstring control.
+        /// txtTrustedConnectionServerName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox databaseconnectionstring;
+        protected global::System.Web.UI.WebControls.TextBox txtTrustedConnectionServerName;
 
         /// <summary>
-        /// ConnectionOutcome control.
+        /// txtTrustedConnectionDBName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ConnectionOutcome;
+        protected global::System.Web.UI.WebControls.TextBox txtTrustedConnectionDBName;
+
+        /// <summary>
+        /// txtBoxUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBoxUserName;
+
+        /// <summary>
+        /// txtBoxPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBoxPassword;
+
+        /// <summary>
+        /// CheckBoxIsEncrypted control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBoxIsEncrypted;
+
+        /// <summary>
+        /// CheckBoxTrustServerCertificate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBoxTrustServerCertificate;
+
+        /// <summary>
+        /// ButtonConnectToDBTrustedConnection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonConnectToDBTrustedConnection;
+
+        /// <summary>
+        /// ButtonConnectToDBConnectionString control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonConnectToDBConnectionString;
+
+        /// <summary>
+        /// pResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pResults;
+
+        /// <summary>
+        /// divComputedConnectionString control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divComputedConnectionString;
+
+        /// <summary>
+        /// divConnectionOutcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConnectionOutcome;
     }
 }

@@ -15,7 +15,7 @@
              ContentPlaceHolderID="MainContent" 
              runat="server">
 
-    <div class="card" style="margin-top: 80px;">
+    <div class="card" style="margin-top: 20px;">
         <div class="card-header bg-info text-white">
             <h3 class="mb-0">Share File Information</h3>
         </div>

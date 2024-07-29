@@ -10,7 +10,6 @@ nav {
     width: 100%;
     background-color: #333; /* Dark background color */
     overflow: hidden; /* Clear floats */
-    position: fixed; /* Fixed at the top */
     top: 0;
     left: 0;
 }

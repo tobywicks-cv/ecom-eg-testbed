@@ -12,7 +12,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        <section>
+        <section style="margin-top: 20px">
             <h2>ECOM Evergreen Testbed</h2>
             <p>
                 This is the ECOM Evergreen test app.

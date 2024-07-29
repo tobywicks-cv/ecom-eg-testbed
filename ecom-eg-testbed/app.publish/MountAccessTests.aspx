@@ -5,7 +5,7 @@
           href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="card" style="margin-top: 80px;">
+        <div class="card" style="margin-top: 20px;">
         <div class="card-header bg-info text-white">
             <h3 class="mb-0">App Service Mount Info</h3>
         </div>

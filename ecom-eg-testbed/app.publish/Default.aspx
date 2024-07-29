@@ -1,5 +1,14 @@
-﻿<%@ Page Title="ECOM EG Testbed" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EcomEgTestBed._Default" %>
+﻿<%@ Page Title="ECOM EG Testbed" Language="C#"
+    MasterPageFile="~/Site.Master"
+    AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs"
+    Inherits="EcomEgTestBed._Default" %>
 
+<asp:Content runat="server"
+    ContentPlaceHolderID="HeaderContent">
+    <link rel="stylesheet"
+        href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
@@ -9,10 +18,10 @@
                 This is the ECOM Evergreen test app.
             </p>
         </section>
-        
+
         <section>
             <h3>Request Headers</h3>
-            
+
             <p>
                 <table cellpadding="3px">
                     <tr>
@@ -21,33 +30,80 @@
                     </tr>
                     <tr>
                         <td><code>:authority:</code></td>
-                        <td><asp:Label ID="authority" runat="server" Text=""></asp:Label></td>
+                        <td>
+                            <asp:Label ID="authority" runat="server" Text=""></asp:Label></td>
                     </tr>
                     <tr>
                         <td><code>x-forwarded-host</code></td>
-                        <td><asp:Label ID="forwardedHostLabel" runat="server" Text=""></asp:Label></td>
+                        <td>
+                            <asp:Label ID="forwardedHostLabel" runat="server" Text=""></asp:Label></td>
                     </tr>
                     <tr>
                         <td><code>host</code></td>
-                        <td><asp:Label ID="hostLabel" runat="server" Text=""></asp:Label></td>
+                        <td>
+                            <asp:Label ID="hostLabel" runat="server" Text=""></asp:Label></td>
                     </tr>
                 </table>
             </p>
         </section>
 
         <section>
-            <h3>Database Connection</h3>
+            <h3>Database Connection Tests</h3>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="txtTrustedConnectionServerName" runat="server" class="form-label">Server URL</label>
+                    <asp:TextBox CssClass="form-control" runat="server" ID="txtTrustedConnectionServerName" ClientIDMode="Static"></asp:TextBox>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtTrustedConnectionDBName" class="form-label">Database Name</label>
+                    <asp:TextBox CssClass="form-control" runat="server" ID="txtTrustedConnectionDBName" ClientIDMode="Static"></asp:TextBox>
+                </div>
+            </div>
 
-            <form>
-                <label>Database connection string:</label>
-                <asp:TextBox style="width: 75%" runat="server" ID="databaseconnectionstring" name="databaseconnectionstring" ></asp:TextBox>
-                <p>
-                    <button type="submit">Connect to DB</button>
-                </p>
-            </form>
+            <div class="row g-3">
 
-            <p>
-                <asp:Label runat="server" ID="ConnectionOutcome"></asp:Label>
+                <div class="col-md-6">
+                    <label for="txtBoxUserName" class="form-label">User Name</label>
+                    <asp:TextBox CssClass="form-control" runat="server" ID="txtBoxUserName" ClientIDMode="Static"></asp:TextBox>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtBoxPassword" class="form-label">Password</label>
+                    <asp:TextBox CssClass="form-control" runat="server" ID="txtBoxPassword" ClientIDMode="Static"></asp:TextBox>
+                </div>
+
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="CheckBoxIsEncrypted" class="form-label">Encrypt</label>
+                    <asp:CheckBox CssClass="form-control" ID="CheckBoxIsEncrypted" ClientIDMode="Static" runat="server" />
+                </div>
+
+                <div class="col-md-6">
+                    <label for="CheckBoxIsEncrypted" class="form-label">Trust Server Certificate</label>
+                    <asp:CheckBox CssClass="form-control" ID="CheckBoxTrustServerCertificate" ClientIDMode="Static" runat="server" />
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <asp:Button ID="ButtonConnectToDBTrustedConnection" runat="server"
+                    OnClick="ButtonConnectToDBTrustedConnection_OnClick"
+                    Text="Connect to DB with Trusted Connection" />
+
+                <asp:Button ID="ButtonConnectToDBConnectionString" runat="server"
+                    OnClick="ButtonConnectToDBConnectionString_OnClick"
+                    Text="Connect to DB with Connection String" />
+            </div>
+            <p id="pResults" runat="server" visible="False">
+                <div id="divComputedConnectionString" runat="server"
+                    class="alert alert-info">
+                </div>
+                <div runat="server"
+                    class="alert alert-warning"
+                    id="divConnectionOutcome">
+                </div>
             </p>
         </section>
     </main>

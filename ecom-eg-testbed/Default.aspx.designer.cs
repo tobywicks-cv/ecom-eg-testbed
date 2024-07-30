@@ -15,15 +15,6 @@ namespace EcomEgTestBed
     {
 
         /// <summary>
-        /// authority control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label authority;
-
-        /// <summary>
         /// forwardedHostLabel control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,33 @@ namespace EcomEgTestBed
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label hostLabel;
+
+        /// <summary>
+        /// authority control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label authority;
+
+        /// <summary>
+        /// AzureWebsiteSiteName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AzureWebsiteSiteName;
+
+        /// <summary>
+        /// AzureWebsiteResourceGroup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AzureWebsiteResourceGroup;
 
         /// <summary>
         /// txtTrustedConnectionServerName control.

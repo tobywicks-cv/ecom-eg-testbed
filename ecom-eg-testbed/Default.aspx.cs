@@ -13,7 +13,13 @@ namespace EcomEgTestBed
             this.authority.Text = string.IsNullOrEmpty(authority) ? "[blank]" : authority;
 
             var xForwardedHost = Request.Headers["X-Forwarded-Host"];
-            this.forwardedHostLabel.Text = string.IsNullOrEmpty(xForwardedHost) ? "[blank]" : xForwardedHost;
+            forwardedHostLabel.Text = string.IsNullOrEmpty(xForwardedHost) ? "[blank]" : xForwardedHost;
+
+            var websiteSiteName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME");
+            AzureWebsiteSiteName.Text = string.IsNullOrEmpty(websiteSiteName) ? "[blank]" : websiteSiteName;
+
+            var websiteResourceGroup = Environment.GetEnvironmentVariable("WEBSITE_RESOURCE_GROUP");
+            AzureWebsiteResourceGroup.Text = string.IsNullOrEmpty(websiteResourceGroup) ? "[blank]" : websiteResourceGroup;
 
             if (!Page.IsPostBack)
             {

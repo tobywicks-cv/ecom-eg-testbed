@@ -29,19 +29,43 @@
                         <th style="text-align: left">Value</th>
                     </tr>
                     <tr>
-                        <td><code>:authority:</code></td>
+                        <td>x-forwarded-host</td>
                         <td>
-                            <asp:Label ID="authority" runat="server" Text=""></asp:Label></td>
+                            <asp:Label ID="forwardedHostLabel" runat="server" Text=""></asp:Label>
+                        </td>
                     </tr>
                     <tr>
-                        <td><code>x-forwarded-host</code></td>
+                        <td>host</td>
                         <td>
-                            <asp:Label ID="forwardedHostLabel" runat="server" Text=""></asp:Label></td>
+                            <asp:Label ID="hostLabel" runat="server" Text=""></asp:Label>
+                        </td>
                     </tr>
                     <tr>
-                        <td><code>host</code></td>
+                        <td>:authority:</td>
                         <td>
-                            <asp:Label ID="hostLabel" runat="server" Text=""></asp:Label></td>
+                            <asp:Label ID="authority" runat="server" Text=""></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </p>
+        </section>
+        
+        <section>
+            <h3>Environment Variables</h3>
+
+            <p>
+                <table cellpadding="3px">
+                    <tr>
+                        <td>WEBSITE_SITE_NAME</td>
+                        <td>
+                            <asp:Label ID="AzureWebsiteSiteName" runat="server" Text=""></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>WEBSITE_RESOURCE_GROUP</td>
+                        <td>
+                            <asp:Label ID="AzureWebsiteResourceGroup" runat="server" Text=""></asp:Label>
+                        </td>
                     </tr>
                 </table>
             </p>

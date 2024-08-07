@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.UI;
 using Microsoft.Data.SqlClient;
 
@@ -8,6 +9,8 @@ namespace EcomEgTestBed
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["YourPageIDorName"] = 1;
+
             this.hostLabel.Text = Request.Headers["Host"];
             var authority = Request.Headers[":authority:"];
             this.authority.Text = string.IsNullOrEmpty(authority) ? "[blank]" : authority;

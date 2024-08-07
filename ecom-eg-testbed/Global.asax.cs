@@ -14,7 +14,7 @@ namespace EcomEgTestBed
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
-        private const bool TenantInitializing = true;
+        private const bool TenantInitializing = false;
 
         protected void Application_BeginRequest(Object sender, EventArgs e)
         {
@@ -42,6 +42,17 @@ namespace EcomEgTestBed
         {
             var x = HttpContext.Current;
             Debug.WriteLine("Application_Error");
+        }
+
+        protected void Session_Start(Object sender, EventArgs e)
+        {
+            Debug.WriteLine("Session_Start");
+        }
+
+        protected void Session_End(Object sender, EventArgs e)
+        {
+            Debug.WriteLine("Session_End");
+
         }
 
         protected void Application_EndRequest(Object sender, EventArgs e)

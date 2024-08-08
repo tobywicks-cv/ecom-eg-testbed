@@ -29,7 +29,8 @@ namespace EcomEgTestBed
                     var httpResponse = HttpContext.Current.Response;
                     httpResponse.StatusCode = (int)HttpStatusCode.Accepted;
                     httpResponse.Write($"Initializing tenant");
-                    httpResponse.End();
+
+                    HttpContext.Current.ApplicationInstance.CompleteRequest();
                 }
                 catch (Exception ex)
                 {

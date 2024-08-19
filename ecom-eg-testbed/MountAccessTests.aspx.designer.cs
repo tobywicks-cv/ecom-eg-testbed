@@ -15,24 +15,6 @@ namespace EcomEgTestBed
     {
 
         /// <summary>
-        /// lblShareName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShareName;
-
-        /// <summary>
-        /// txtShareName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShareName;
-
-        /// <summary>
         /// lblDirectoryName control.
         /// </summary>
         /// <remarks>
@@ -42,13 +24,13 @@ namespace EcomEgTestBed
         protected global::System.Web.UI.WebControls.Label lblDirectoryName;
 
         /// <summary>
-        /// txtTenantId control.
+        /// txtFolderPath control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenantId;
+        protected global::System.Web.UI.WebControls.TextBox txtFolderPath;
 
         /// <summary>
         /// btnGetFilesInDirectory control.

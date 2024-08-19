@@ -98,20 +98,7 @@ namespace EcomEgTestBed
 
         private string GetFilePath()
         {
-            string path = txtShareName.Text.Trim();
-
-            string tenant = txtTenantId.Text.Trim();
-
-            if (!string.IsNullOrEmpty(tenant))
-            {
-                tenant = $@"\{tenant}";
-            }
-
-            if (Request.IsLocal)
-            {
-                return $@"\\{path}{tenant}";
-            }
-            return $@"\\mounts\{path}{tenant}";
+            return txtFolderPath.Text.Trim();
         }
 
         protected void ButtonWriteToMountShare_OnClick(object sender, EventArgs e)
@@ -129,7 +116,7 @@ namespace EcomEgTestBed
                     return;
                 }
 
-                var filePath = combinedNetworkPath + @"\NetworkShare-" + DateTime.Now.ToString("dd-MMM-yyyy-HH-mm-ss") + ".txt";
+                var filePath = combinedNetworkPath + @"\MountShare-" + DateTime.Now.ToString("dd-MMM-yyyy-HH-mm-ss") + ".txt";
 
                 File.WriteAllText(filePath,
                     $"{DateTime.Now.ToLongTimeString()} - Bob is bob");

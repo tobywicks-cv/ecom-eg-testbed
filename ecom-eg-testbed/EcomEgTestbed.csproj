@@ -224,6 +224,7 @@
     <Content Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
     <Content Include="Redirect.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="LongRunningWebRequest.aspx" />
     <Content Include="TestFileShareConnectivity.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -260,6 +261,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LongRunningWebRequest.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>LongRunningWebRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LongRunningWebRequest.aspx.designer.cs">
+      <DependentUpon>LongRunningWebRequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestFileShareConnectivity.aspx.cs">
       <DependentUpon>TestFileShareConnectivity.aspx</DependentUpon>

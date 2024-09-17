@@ -29,6 +29,7 @@
     <a href="~/Default.aspx" runat="server">Home</a>
     <%--<a href="~/TestFileShareConnectivity.aspx" runat="server">Azure File Store</a>--%>
     <a href="~/MountAccessTests.aspx" runat="server">Mount Access</a>
+    <a href="~/ReadInfraCatalog.aspx" runat="server">Read Infra Catalog</a>
     <a href="~/LongRunningWebRequest.aspx" runat="server">Long Running Web Request</a>
 </nav>
     <form runat="server">

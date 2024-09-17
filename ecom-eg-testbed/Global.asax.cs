@@ -20,6 +20,9 @@ namespace EcomEgTestBed
         {
             Debug.WriteLine("Application_BeginRequest");
 
+
+            // ReadInfraCatalog.ReadItemsAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+            
             //throw new InvalidOperationException();
 
             if (TenantInitializing)

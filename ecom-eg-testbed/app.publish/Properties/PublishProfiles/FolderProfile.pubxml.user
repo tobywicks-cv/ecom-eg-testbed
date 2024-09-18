@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Source\ecom-eg-testbed\ecom-eg-testbed\app.publish</_PublishTargetUrl>
-    <History>True|2024-07-29T23:28:59.7295187Z;True|2024-07-29T18:19:20.1549771+10:00;True|2024-07-29T17:56:37.2775678+10:00;True|2024-06-06T16:58:05.1103642+10:00;True|2024-06-06T16:18:50.2864045+10:00;False|2024-06-06T16:18:18.0463186+10:00;True|2024-05-31T14:39:15.2726040+10:00;True|2024-05-14T10:35:17.4277842+10:00;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
+    <_PublishTargetUrl>app.publish</_PublishTargetUrl>
+    <History>True|2024-08-01T22:22:25.3634660Z;True|2024-07-30T11:24:42.8268761+10:00;True|2024-07-30T09:28:59.7295187+10:00;True|2024-07-29T18:19:20.1549771+10:00;True|2024-07-29T17:56:37.2775678+10:00;True|2024-06-06T16:58:05.1103642+10:00;True|2024-06-06T16:18:50.2864045+10:00;False|2024-06-06T16:18:18.0463186+10:00;True|2024-05-31T14:39:15.2726040+10:00;True|2024-05-14T10:35:17.4277842+10:00;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -37,10 +37,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/28/2024 13:32:54</publishTime>
     </File>
     <File Include="bin/EcomEgTestBed.dll">
-      <publishTime>07/30/2024 09:28:59</publishTime>
+      <publishTime>08/02/2024 08:22:25</publishTime>
     </File>
     <File Include="bin/EcomEgTestBed.pdb">
-      <publishTime>07/30/2024 09:28:59</publishTime>
+      <publishTime>08/02/2024 08:22:25</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Data.SqlClient.resources.dll">
       <publishTime>02/28/2024 13:32:54</publishTime>
@@ -361,7 +361,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/29/2024 18:18:11</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/FolderProfile.pubxml.user">
-      <publishTime>07/29/2024 18:19:20</publishTime>
+      <publishTime>08/02/2024 08:22:25</publishTime>
     </File>
     <File Include="readme.md">
       <publishTime>05/31/2024 14:46:47</publishTime>

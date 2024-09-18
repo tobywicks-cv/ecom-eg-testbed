@@ -2,6 +2,7 @@
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
     CodeBehind="Default.aspx.cs"
+    EnableSessionState="true"
     Inherits="EcomEgTestBed._Default" %>
 
 <asp:Content runat="server"

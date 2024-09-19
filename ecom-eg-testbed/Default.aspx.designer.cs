@@ -114,6 +114,15 @@ namespace EcomEgTestBed
         protected global::System.Web.UI.WebControls.CheckBox CheckBoxTrustServerCertificate;
 
         /// <summary>
+        /// ButtonConnectToUsingManagedIdentity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonConnectToUsingManagedIdentity;
+
+        /// <summary>
         /// ButtonConnectToDBTrustedConnection control.
         /// </summary>
         /// <remarks>
@@ -157,5 +166,19 @@ namespace EcomEgTestBed
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConnectionOutcome;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new EcomEgTestBed.SiteMaster Master
+        {
+            get
+            {
+                return ((EcomEgTestBed.SiteMaster)(base.Master));
+            }
+        }
     }
 }

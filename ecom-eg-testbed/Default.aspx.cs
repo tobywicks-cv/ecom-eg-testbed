@@ -26,46 +26,27 @@ namespace EcomEgTestBed
 
             if (!Page.IsPostBack)
             {
-                txtTrustedConnectionDBName.Text = InitialConnectionString.InitialCatalog;
-                txtTrustedConnectionServerName.Text = InitialConnectionString.DataSource;
-                txtBoxUserName.Text = InitialConnectionString.UserID;
-                txtBoxPassword.Text = InitialConnectionString.Password;
-                CheckBoxIsEncrypted.Checked = InitialConnectionString.Encrypt;
-                CheckBoxTrustServerCertificate.Checked = InitialConnectionString.TrustServerCertificate;
+                txtTrustedConnectionDBName.Text = "cv-db-site-qa-eastau";
+                txtTrustedConnectionServerName.Text = "cv-sqls-site-qa-eastau.database.windows.net";
+                txtBoxUserName.Text = "cv-admin";
+                txtBoxPassword.Text = "ek38ep2njAW%raJvzcK8*3";
+                CheckBoxIsEncrypted.Checked = SqlConnectionEncryptOption.Optional;
+                CheckBoxTrustServerCertificate.Checked = true;
             }
         }
 
-        private SqlConnectionStringBuilder InitialConnectionString
-        {
-            get
-            {
-                return new SqlConnectionStringBuilder
-                {
-                    DataSource = "cv-sqls-site-qa-eastau.database.windows.net",
-                    InitialCatalog = "cv-db-site-qa-eastau",
-                    UserID = "cv-admin",
-                    Password = "ek38ep2njAW%raJvzcK8*3",
-                    Authentication = SqlAuthenticationMethod.SqlPassword,
-                    //builder.Authentication = SqlAuthenticationMethod.ActiveDirectoryIntegrated;
-                    Encrypt = SqlConnectionEncryptOption.Optional,
-                    TrustServerCertificate = true
-                };
-            }
-        }
-
-        private SqlConnectionStringBuilder GetConnectionStringBuilder(bool isIntegrated)
+        private SqlConnectionStringBuilder GetConnectionStringBuilder(SqlAuthenticationMethod authenticationMethod)
         {
             var conBuilder = new SqlConnectionStringBuilder
             {
                 DataSource = txtTrustedConnectionServerName.Text.Trim(),
                 InitialCatalog = txtTrustedConnectionDBName.Text.Trim(),
-                Authentication = isIntegrated ? SqlAuthenticationMethod.ActiveDirectoryIntegrated :
-                SqlAuthenticationMethod.SqlPassword,
+                Authentication = authenticationMethod,
                 Encrypt = CheckBoxIsEncrypted.Checked,
                 TrustServerCertificate = CheckBoxTrustServerCertificate.Checked
             };
 
-            if (!isIntegrated)
+            if (authenticationMethod == SqlAuthenticationMethod.SqlPassword)
             {
                 conBuilder.UserID = txtBoxUserName.Text.Trim();
                 conBuilder.Password = txtBoxPassword.Text.Trim();
@@ -76,10 +57,25 @@ namespace EcomEgTestBed
 
         protected void ButtonConnectToDBConnectionString_OnClick(object sender, EventArgs e)
         {
+            ConnectToDb(SqlAuthenticationMethod.SqlPassword);
+        }
+
+        protected void ButtonConnectToUsingManagedIdentity_OnClick(object sender, EventArgs e)
+        {
+            ConnectToDb(SqlAuthenticationMethod.ActiveDirectoryManagedIdentity);
+        }
+
+        protected void ButtonConnectToDBTrustedConnection_OnClick(object sender, EventArgs e)
+        {
+            ConnectToDb(SqlAuthenticationMethod.ActiveDirectoryIntegrated);
+        }
+        
+        private void ConnectToDb(SqlAuthenticationMethod sqlAuthenticationMethod)
+        {
             pResults.Visible = true;
             try
             {
-                string connectionString = GetConnectionStringBuilder(false).ConnectionString;
+                string connectionString = GetConnectionStringBuilder(sqlAuthenticationMethod).ConnectionString;
                 divComputedConnectionString.InnerHtml = connectionString;
                 var connection = new SqlConnection(connectionString);
                 connection.Open();
@@ -92,22 +88,5 @@ namespace EcomEgTestBed
             }
         }
 
-        protected void ButtonConnectToDBTrustedConnection_OnClick(object sender, EventArgs e)
-        {
-            pResults.Visible = true;
-            try
-            {
-                string connectionString = GetConnectionStringBuilder(true).ConnectionString;
-                divComputedConnectionString.InnerHtml = connectionString;
-                var connection = new SqlConnection(connectionString);
-                connection.Open();
-                connection.Close();
-                divConnectionOutcome.InnerHtml = "\u2705 Successfully connected to database!";
-            }
-            catch (Exception exception)
-            {
-                divConnectionOutcome.InnerHtml = "\ud83d\uded1 " + exception.Message + Environment.NewLine + exception.StackTrace;
-            }
-        }
     }
 }

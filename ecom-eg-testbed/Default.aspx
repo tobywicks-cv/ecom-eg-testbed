@@ -1,14 +1,14 @@
 ﻿<%@ Page Title="ECOM EG Testbed" Language="C#"
-    MasterPageFile="~/Site.Master"
-    AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs"
-    EnableSessionState="true"
-    Inherits="EcomEgTestBed._Default" %>
+MasterPageFile="~/Site.Master"
+AutoEventWireup="true"
+CodeBehind="Default.aspx.cs"
+EnableSessionState="true"
+Inherits="EcomEgTestBed._Default" %>
 
 <asp:Content runat="server"
-    ContentPlaceHolderID="HeaderContent">
+             ContentPlaceHolderID="HeaderContent">
     <link rel="stylesheet"
-        href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+          href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -50,7 +50,7 @@
                 </table>
             </p>
         </section>
-        
+
         <section>
             <h3>Environment Variables</h3>
 
@@ -103,31 +103,45 @@
 
                 <div class="col-md-6">
                     <label for="CheckBoxIsEncrypted" class="form-label">Encrypt</label>
-                    <asp:CheckBox CssClass="form-control" ID="CheckBoxIsEncrypted" ClientIDMode="Static" runat="server" />
+                    <asp:CheckBox CssClass="form-control" ID="CheckBoxIsEncrypted" ClientIDMode="Static" runat="server"/>
                 </div>
 
                 <div class="col-md-6">
                     <label for="CheckBoxIsEncrypted" class="form-label">Trust Server Certificate</label>
-                    <asp:CheckBox CssClass="form-control" ID="CheckBoxTrustServerCertificate" ClientIDMode="Static" runat="server" />
+                    <asp:CheckBox CssClass="form-control" ID="CheckBoxTrustServerCertificate" ClientIDMode="Static" runat="server"/>
                 </div>
 
             </div>
-            <div class="mb-3">
-                <asp:Button ID="ButtonConnectToDBTrustedConnection" runat="server"
-                    OnClick="ButtonConnectToDBTrustedConnection_OnClick"
-                    Text="Connect to DB with Trusted Connection" />
-
-                <asp:Button ID="ButtonConnectToDBConnectionString" runat="server"
-                    OnClick="ButtonConnectToDBConnectionString_OnClick"
-                    Text="Connect to DB with Connection String" />
+             <div class="row mb-3" style="padding-top: 20px">
+                <div class="col-md-6">
+                    <asp:Button ID="ButtonConnectToUsingManagedIdentity" runat="server"
+                                OnClick="ButtonConnectToUsingManagedIdentity_OnClick"
+                                Text="Connect to DB using Active Directory Managed Identity"/>
+                 </div>
+             </div>
+            
+            <div class="row mb-3" style="padding-top: 20px">
+                <div class="col-md-6">
+                    <asp:Button ID="ButtonConnectToDBTrustedConnection" runat="server"
+                                OnClick="ButtonConnectToDBTrustedConnection_OnClick"
+                                Text="Connect to DB with Trusted Connection"/>
+                </div>
+            </div>
+           
+            <div class="row mb-3" style="padding-top: 20px">
+                <div class="col-md-6">
+                    <asp:Button ID="ButtonConnectToDBConnectionString" runat="server"
+                                OnClick="ButtonConnectToDBConnectionString_OnClick"
+                                Text="Connect to DB using Credentials"/>
+                </div>
             </div>
             <p id="pResults" runat="server" visible="False">
                 <div id="divComputedConnectionString" runat="server"
-                    class="alert alert-info">
+                     class="alert alert-info">
                 </div>
                 <div runat="server"
-                    class="alert alert-warning"
-                    id="divConnectionOutcome">
+                     class="alert alert-warning"
+                     id="divConnectionOutcome">
                 </div>
             </p>
         </section>

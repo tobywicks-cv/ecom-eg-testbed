@@ -26,8 +26,8 @@ namespace EcomEgTestBed
 
             if (!Page.IsPostBack)
             {
-                txtTrustedConnectionDBName.Text = "cv-db-site-qa-eastau";
-                txtTrustedConnectionServerName.Text = "cv-sqls-site-qa-eastau.database.windows.net";
+                txtTrustedConnectionDBName.Text = "cv-db-site-qa-australiaeast-TenantA";
+                txtTrustedConnectionServerName.Text = "cv-sqls-site-qa-australiaeast-001.database.windows.net";
                 txtBoxUserName.Text = "cv-admin";
                 txtBoxPassword.Text = "ek38ep2njAW%raJvzcK8*3";
                 CheckBoxIsEncrypted.Checked = SqlConnectionEncryptOption.Optional;

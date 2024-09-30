@@ -79,8 +79,14 @@ namespace EcomEgTestBed
                 divComputedConnectionString.InnerHtml = connectionString;
                 var connection = new SqlConnection(connectionString);
                 connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "select * from [dbo].[System]";
+                using (var r = command.ExecuteReader())
+                {
+                    r.Read();
+                }
                 connection.Close();
-                divConnectionOutcome.InnerHtml = "\u2705 Successfully connected to database!";
+                divConnectionOutcome.InnerHtml = "\u2705 Successfully connected to database and read the [System] table!";
             }
             catch (Exception exception)
             {

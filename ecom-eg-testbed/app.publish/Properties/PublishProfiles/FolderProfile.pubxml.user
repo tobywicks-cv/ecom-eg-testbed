@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Source\ecom-eg-testbed\ecom-eg-testbed\app.publish</_PublishTargetUrl>
-    <History>True|2024-09-30T05:03:52.2616640Z;True|2024-09-30T14:59:05.7043059+10:00;True|2024-09-27T17:10:00.4881804+10:00;True|2024-09-19T12:46:25.5729940+10:00;True|2024-09-18T20:53:08.7593697+10:00;True|2024-08-02T08:22:25.3634660+10:00;True|2024-07-30T11:24:42.8268761+10:00;True|2024-07-30T09:28:59.7295187+10:00;True|2024-07-29T18:19:20.1549771+10:00;True|2024-07-29T17:56:37.2775678+10:00;True|2024-06-06T16:58:05.1103642+10:00;True|2024-06-06T16:18:50.2864045+10:00;False|2024-06-06T16:18:18.0463186+10:00;True|2024-05-31T14:39:15.2726040+10:00;True|2024-05-14T10:35:17.4277842+10:00;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
+    <History>True|2024-09-30T07:37:18.6443427Z;True|2024-09-30T15:04:08.9104667+10:00;True|2024-09-30T15:03:52.2616640+10:00;True|2024-09-30T14:59:05.7043059+10:00;True|2024-09-27T17:10:00.4881804+10:00;True|2024-09-19T12:46:25.5729940+10:00;True|2024-09-18T20:53:08.7593697+10:00;True|2024-08-02T08:22:25.3634660+10:00;True|2024-07-30T11:24:42.8268761+10:00;True|2024-07-30T09:28:59.7295187+10:00;True|2024-07-29T18:19:20.1549771+10:00;True|2024-07-29T17:56:37.2775678+10:00;True|2024-06-06T16:58:05.1103642+10:00;True|2024-06-06T16:18:50.2864045+10:00;False|2024-06-06T16:18:18.0463186+10:00;True|2024-05-31T14:39:15.2726040+10:00;True|2024-05-14T10:35:17.4277842+10:00;True|2024-05-14T10:34:04.6051717+10:00;True|2024-05-14T10:22:04.9527489+10:00;True|2024-05-14T10:20:47.4517776+10:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -43,10 +43,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/28/2024 13:32:54</publishTime>
     </File>
     <File Include="bin/EcomEgTestBed.dll">
-      <publishTime>09/30/2024 15:03:51</publishTime>
+      <publishTime>09/30/2024 17:37:18</publishTime>
     </File>
     <File Include="bin/EcomEgTestBed.pdb">
-      <publishTime>09/30/2024 15:03:51</publishTime>
+      <publishTime>09/30/2024 17:37:18</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Data.SqlClient.resources.dll">
       <publishTime>02/28/2024 13:32:54</publishTime>
@@ -417,6 +417,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/vcruntime140_1.dll">
       <publishTime>10/12/2023 05:11:08</publishTime>
     </File>
+    <File Include="bin/Web.config">
+      <publishTime>09/27/2024 17:07:17</publishTime>
+    </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 14:27:34</publishTime>
     </File>
@@ -442,7 +445,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/16/2024 17:34:57</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/FolderProfile.pubxml.user">
-      <publishTime>09/30/2024 14:59:05</publishTime>
+      <publishTime>09/30/2024 15:04:08</publishTime>
     </File>
     <File Include="ReadInfraCatalog.aspx">
       <publishTime>09/17/2024 12:02:30</publishTime>

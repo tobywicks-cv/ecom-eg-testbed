@@ -57,20 +57,20 @@ namespace EcomEgTestBed
 
         protected void ButtonConnectToDBConnectionString_OnClick(object sender, EventArgs e)
         {
-            ConnectToDb(SqlAuthenticationMethod.SqlPassword);
+            ConnectToDbAndReadSystemTable(SqlAuthenticationMethod.SqlPassword);
         }
 
         protected void ButtonConnectToUsingManagedIdentity_OnClick(object sender, EventArgs e)
         {
-            ConnectToDb(SqlAuthenticationMethod.ActiveDirectoryManagedIdentity);
+            ConnectToDbAndReadSystemTable(SqlAuthenticationMethod.ActiveDirectoryManagedIdentity);
         }
 
         protected void ButtonConnectToDBTrustedConnection_OnClick(object sender, EventArgs e)
         {
-            ConnectToDb(SqlAuthenticationMethod.ActiveDirectoryIntegrated);
+            ConnectToDbAndReadSystemTable(SqlAuthenticationMethod.ActiveDirectoryIntegrated);
         }
         
-        private void ConnectToDb(SqlAuthenticationMethod sqlAuthenticationMethod)
+        private void ConnectToDbAndReadSystemTable(SqlAuthenticationMethod sqlAuthenticationMethod)
         {
             pResults.Visible = true;
             try
@@ -81,12 +81,17 @@ namespace EcomEgTestBed
                 connection.Open();
                 var command = connection.CreateCommand();
                 command.CommandText = "select * from [dbo].[System]";
+                string code = "";
                 using (var r = command.ExecuteReader())
                 {
-                    r.Read();
+                    
+                    while (r.Read())
+                    {
+                        code = r["code"].ToString();
+                    }
                 }
                 connection.Close();
-                divConnectionOutcome.InnerHtml = "\u2705 Successfully connected to database and read the [System] table!";
+                divConnectionOutcome.InnerHtml = $"\u2705 Successfully connected to database and read the [System] table! Code = {code}";
             }
             catch (Exception exception)
             {

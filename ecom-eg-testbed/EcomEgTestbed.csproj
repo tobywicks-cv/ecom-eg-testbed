@@ -52,6 +52,9 @@
     <Reference Include="Azure.Identity, Version=1.10.3.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.10.3\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="Azure.Security.KeyVault.Secrets, Version=4.6.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Security.KeyVault.Secrets.4.6.0\lib\netstandard2.0\Azure.Security.KeyVault.Secrets.dll</HintPath>
+    </Reference>
     <Reference Include="Azure.Storage.Common, Version=12.19.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Storage.Common.12.19.0\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
     </Reference>
@@ -266,10 +269,12 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\loading.gif" />
     <Content Include="MountAccessTests.aspx" />
-    <Content Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
     <Content Include="ReadInfraCatalog.aspx" />
     <Content Include="Redirect.aspx" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxWebForms.js" />
     <Content Include="Site.Master" />
     <Content Include="LongRunningWebRequest.aspx" />
     <Content Include="TestFileShareConnectivity.aspx" />
@@ -279,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Code\KeyVaultAccess.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,8 +345,10 @@
   <ItemGroup>
     <Content Include="ApplicationInsights.config" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="readme.md" />
+    <None Include="Properties\PublishProfiles\cv-app-site-dev-australiaeast-0017077d50ec843406cbbf5fd3df42 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cv-app-site-dev-australiaeast-0017077d50ec843406cbbf5fd3df42 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cv-app-site-dev-australiaeast-0017077d50ec843406cbbf5fd3df42 - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,7 @@ Inherits="EcomEgTestBed._Default" %>
           href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <main>
         <section style="margin-top: 20px">
             <h2>ECOM Evergreen Testbed</h2>
@@ -71,7 +71,49 @@ Inherits="EcomEgTestBed._Default" %>
                 </table>
             </p>
         </section>
-
+		        <asp:UpdatePanel ID="UpdatePanelKeyVault" runat="server">
+            <ContentTemplate>
+                <section>
+                    <h3>Key Vault Secret</h3>
+                    <p>
+                        <table cellpadding="3px">
+                            <tr>
+                                <td style="font-weight:bold;">Secret name: </td>
+                                <td>
+                                    <asp:TextBox ID="keyVaultSecretName" runat="server" Text="TestBedSecret"  CssClass="form-control"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><strong>Key Vault Name</strong> (not the URL) - something like: <i>cvkvsitedev0017077d50ec8</i></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <asp:TextBox ID="keyVaultName" runat="server"  CssClass="form-control"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Key Vault Value:</td>
+                                <td>
+                                    <asp:Label ID="keyVaultSecretValue" runat="server" Text=""></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <asp:Button ID="ButtonGetKeyVaultValue"
+                                        OnClick="ButtonGetKeyVaultValue_Click"
+                                        runat="server"
+                                        Text="Get Secret From Key Vault" /></td>
+                            </tr>
+                        </table>
+                    </p>
+                </section>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanelKeyVault">
+            <ProgressTemplate>
+                <img src="images/loading.gif" style="max-height:40px;" />
+            </ProgressTemplate>
+        </asp:UpdateProgress>
         <section>
             <h3>Database Connection Tests</h3>
             <div class="row g-3">

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI;
-using EcomEgTestBed.Code;
 using Microsoft.Data.SqlClient;
 
 namespace EcomEgTestBed
@@ -100,9 +99,5 @@ namespace EcomEgTestBed
             }
         }
 
-        protected void ButtonGetKeyVaultValue_Click(object sender, EventArgs e)
-        {
-            keyVaultSecretValue.Text = KeyVaultAccess.ReadSecret(keyVaultSecretName.Text, keyVaultName.Text);
-        }
     }
 }

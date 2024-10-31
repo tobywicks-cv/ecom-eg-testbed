@@ -1,7 +1,13 @@
 name: ECOM Deploy
 on:
   workflow_dispatch:
- 
+    inputs:
+      runid:
+        required: false
+        type: string
+
+run-name: "RunID: ${{ inputs.runid }}"
+
 jobs:
 
   deploy:

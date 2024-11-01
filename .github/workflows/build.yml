@@ -15,3 +15,5 @@ jobs:
     steps:   
       - name: Hello
         run: echo hello2
+      - name: "${{ inputs.runid }}" 
+        run: echo a

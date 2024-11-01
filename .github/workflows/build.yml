@@ -13,7 +13,10 @@ jobs:
   deploy:
     runs-on: windows-latest
     steps:   
-      - name: Hello
-        run: echo hello2
-      - name: "${{ inputs.runid }}" 
+      - name: Generate TenantID
+        id: step1
+        run: |
+          "tenantId=TenantA" >> $env:GITHUB_OUTPUT
+
+      - name: "TenantId=${{ steps.step1.outputs.tenantId }}" 
         run: echo a

@@ -12,7 +12,7 @@ on:
         required: true
         type: string
 
-run-name: "'${{ inputs.siteName }}' New Site"
+run-name: "${{ inputs.siteName }} New Site"
 
 jobs:
 

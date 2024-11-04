@@ -21,8 +21,10 @@ jobs:
     steps:   
       - name: Generate TenantID
         id: tenantGenerator
+        env:
+          SITE_NAME: "${{ inputs.siteName }}"
         run: |
-          $tenantId = -join (inputs.siteName.ToCharArray() | where { $_ -match '[A-Za-z0-9]' })
+          $tenantId = -join ($env:SITE_NAME.ToCharArray() | where { $_ -match '[A-Za-z0-9]' })
           "tenantId=$tenantId" >> $env:GITHUB_OUTPUT
 
       - name: Output Tenant ID

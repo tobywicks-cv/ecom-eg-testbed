@@ -24,7 +24,8 @@ jobs:
         env:
           SITE_NAME: "${{ inputs.siteName }}"
         run: |
-          $tenantId = -join ($env:SITE_NAME.ToCharArray() | where { $_ -match '[A-Za-z0-9]' })
+          $tenantId = (-join ($env:SITE_NAME.ToCharArray() | where { $_ -match '[A-Za-z0-9]' }))
+          if ($tenantId.length -gt 20) { $tenantId = $tenantId.Substring(0, 20) }
           "tenantId=$tenantId" >> $env:GITHUB_OUTPUT
 
       - name: Output Tenant ID

@@ -1,12 +1,18 @@
-name: ECOM Deploy
+name: ECOM Provision New Site
 on:
   workflow_dispatch:
     inputs:
-      runid:
-        required: false
+      siteName:
+        required: true
+        type: string
+      completionWebHook:
+        required: true
+        type: string
+      completionWebHookAuthToken:
+        required: true
         type: string
 
-run-name: "RunID: ${{ inputs.runid }}"
+run-name: "'${{ inputs.siteName }}' New Site"
 
 jobs:
 
@@ -14,9 +20,22 @@ jobs:
     runs-on: windows-latest
     steps:   
       - name: Generate TenantID
-        id: step1
+        id: tenantGenerator
         run: |
-          "tenantId=TenantA" >> $env:GITHUB_OUTPUT
+          $tenantId = -join (inputs.siteName.ToCharArray() | where { $_ -match '[A-Za-z0-9]' })
+          "tenantId=$tenantId" >> $env:GITHUB_OUTPUT
 
-      - name: "TenantId=${{ steps.step1.outputs.tenantId }}" 
-        run: echo a
+      - name: Output Tenant ID
+        run: Write-Host steps.tenantGenerator.outputs.tenantId
+
+      - name: Send job status
+        if: always()
+        env:
+          COMPLETION_WEB_HOOK: "${{ inputs.completionWebHook }}"
+          COMPLETION_WEB_HOOK_AUTH_TOKEN: "${{ inputs.completionWebHookAuthToken }}"
+          JOB_STATUS: "${{ job.status }}"
+          TENANT_ID: "${{ steps.tenantGenerator.outputs.tenantId }}"
+        run: |
+          $headers = @{ "Content-Type" = "application/json"; "Authorization" = "Bearer $env:COMPLETION_WEB_HOOK_AUTH_TOKEN"} 
+          $body = @{ tenantId = $env:TENANT_ID; status = $env:JOB_STATUS }
+          Invoke-WebRequest -Method POST -Uri $env:COMPLETION_WEB_HOOK -Headers $headers -Body ($body | ConvertTo-Json)

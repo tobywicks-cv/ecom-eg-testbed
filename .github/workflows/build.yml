@@ -35,6 +35,9 @@ jobs:
       - name: Output Tenant ID
         run: Write-Host steps.tenantGenerator.outputs.tenantId
 
+      - name: Output environment var
+        run: Write-Host ${{ vars.TEST }}
+
       - name: Send job status
         if: always()
         env:

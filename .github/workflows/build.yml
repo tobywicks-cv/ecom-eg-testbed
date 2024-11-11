@@ -11,6 +11,9 @@ on:
       completionWebHookAuthToken:
         required: true
         type: string
+      the_env:
+        required: true
+        type: environment
 
 run-name: "${{ inputs.siteName }} New Site"
 
@@ -18,6 +21,7 @@ jobs:
 
   deploy:
     runs-on: windows-latest
+    environment: ${{ github.event.inputs.the_env || 'qa' }}
     steps:   
       - name: Generate TenantID
         id: tenantGenerator

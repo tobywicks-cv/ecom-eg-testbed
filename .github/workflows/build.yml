@@ -14,6 +14,7 @@ on:
       the_env:
         required: true
         type: environment
+        default: qa
 
 run-name: "${{ inputs.siteName }} New Site"
 

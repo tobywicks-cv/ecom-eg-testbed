@@ -24,6 +24,9 @@ jobs:
     runs-on: windows-latest
     environment: ${{ github.event.inputs.the_env || 'qa' }}
     steps:   
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+      
       - name: Generate TenantID
         id: tenantGenerator
         env:

@@ -36,6 +36,12 @@ jobs:
           if ($tenantId.length -gt 20) { $tenantId = $tenantId.Substring(0, 20) }
           "tenantId=$tenantId" >> $env:GITHUB_OUTPUT
 
+      - name: Get Name
+        run: |
+          $hide = "t44fq389fjalskfjaf4i7hfaskdjhfasdf"
+          Write-Host "::add-mask::$hide"
+          Write-Host "The hidden value is $hide"
+          
       - name: Output Tenant ID
         run: Write-Host steps.tenantGenerator.outputs.tenantId
 

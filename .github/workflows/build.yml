@@ -23,7 +23,12 @@ jobs:
   deploy:
     runs-on: windows-latest
     environment: ${{ github.event.inputs.the_env || 'qa' }}
+    env:
+      TOKEN: '123'
     steps:   
+      - name: Mask tokens
+        run: Write-Host "::add-mask::$($env:TOKEN)"
+    
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
       
@@ -38,9 +43,7 @@ jobs:
 
       - name: Get Name
         run: |
-          $hide = "t44fq389fjalskfjaf4i7hfaskdjhfasdf"
-          Write-Host "::add-mask::$hide"
-          Write-Host "The hidden value is $hide"
+          Write-Host "The hidden value is $env:token"
           
       - name: Output Tenant ID
         run: Write-Host steps.tenantGenerator.outputs.tenantId

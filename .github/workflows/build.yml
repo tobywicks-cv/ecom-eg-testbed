@@ -28,37 +28,7 @@ jobs:
     steps:   
       - name: Mask tokens
         run: Write-Host "::add-mask::$($env:TOKEN)"
-    
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-      
-      - name: Generate TenantID
-        id: tenantGenerator
-        env:
-          SITE_NAME: "${{ inputs.siteName }}"
-        run: |
-          $tenantId = (-join ($env:SITE_NAME.ToCharArray() | where { $_ -match '[A-Za-z0-9]' }))
-          if ($tenantId.length -gt 20) { $tenantId = $tenantId.Substring(0, 20) }
-          "tenantId=$tenantId" >> $env:GITHUB_OUTPUT
 
       - name: Get Name
         run: |
           Write-Host "The hidden value is $env:token"
-          
-      - name: Output Tenant ID
-        run: Write-Host steps.tenantGenerator.outputs.tenantId
-
-      - name: Output environment var
-        run: Write-Host ${{ vars.TEST }}
-
-      - name: Send job status
-        if: always()
-        env:
-          COMPLETION_WEB_HOOK: "${{ inputs.completionWebHook }}"
-          COMPLETION_WEB_HOOK_AUTH_TOKEN: "${{ inputs.completionWebHookAuthToken }}"
-          JOB_STATUS: "${{ job.status }}"
-          TENANT_ID: "${{ steps.tenantGenerator.outputs.tenantId }}"
-        run: |
-          $headers = @{ "Content-Type" = "application/json"; "Authorization" = "Bearer $env:COMPLETION_WEB_HOOK_AUTH_TOKEN"} 
-          $body = @{ tenantId = $env:TENANT_ID; status = $env:JOB_STATUS }
-          Invoke-WebRequest -Method POST -Uri $env:COMPLETION_WEB_HOOK -Headers $headers -Body ($body | ConvertTo-Json)

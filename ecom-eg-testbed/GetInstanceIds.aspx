@@ -34,6 +34,10 @@
                 ID="btnGetInstanceIds"
                 OnClick="btnGetInstanceIds_Click"></asp:Button>
 
+            <div id="divShowResult" runat="server" visible="False" class="alert alert-info">
+                <asp:Label ID="lblInstanceIdsResult" runat="server" CssClass="col-sm-3 col-form-label"></asp:Label>
+            </div>
+
         </div>
     </div>
 

@@ -35,6 +35,8 @@ namespace EcomEgTestBed
 
         protected void btnGetInstanceIds_Click(object sender, EventArgs e)
         {
+            divShowResult.Visible = true;
+            lblInstanceIdsResult.Text = "this is the result";
         }
     }
 }

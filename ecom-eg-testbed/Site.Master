@@ -31,6 +31,7 @@
     <a href="~/MountAccessTests.aspx" runat="server">Mount Access</a>
     <a href="~/ReadInfraCatalog.aspx" runat="server">Read Infra Catalog</a>
     <a href="~/LongRunningWebRequest.aspx" runat="server">Long Running Web Request</a>
+    <a href="~/GetInstanceIds.aspx" runat="server">Get Site Instance IDs</a>
 </nav>
     <form runat="server">
         <div class="container body-content">

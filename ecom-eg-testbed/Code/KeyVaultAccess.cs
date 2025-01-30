@@ -31,3 +31,9 @@ namespace EcomEgTestBed.Code
         }
     }
 }
+//
+// string keyVaultUrl = $"https://{keyVaultName}.vault.azure.net/";
+// var client = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+//
+// KeyVaultSecret secret = client.GetSecret(secretName);
+// return secret.Value;

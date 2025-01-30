@@ -69,6 +69,24 @@ namespace EcomEgTestBed
         protected global::System.Web.UI.WebControls.TextBox txtAzureWebSiteName2;
 
         /// <summary>
+        /// lblMachineName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMachineName;
+
+        /// <summary>
+        /// txtMachineName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMachineName;
+
+        /// <summary>
         /// btnGetInstanceIds control.
         /// </summary>
         /// <remarks>

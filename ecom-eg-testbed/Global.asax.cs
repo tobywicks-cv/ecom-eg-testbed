@@ -25,21 +25,21 @@ namespace EcomEgTestBed
             
             //throw new InvalidOperationException();
 
-            if (TenantInitializing)
-            {
-                try
-                {
-                    var httpResponse = HttpContext.Current.Response;
-                    httpResponse.StatusCode = (int)HttpStatusCode.Accepted;
-                    httpResponse.Write($"Initializing tenant");
-
-                    HttpContext.Current.ApplicationInstance.CompleteRequest();
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine("Application_BeginRequest EXCEPTION " + ex.Message);
-                }
-            }
+            // if (TenantInitializing)
+            // {
+            //     try
+            //     {
+            //         var httpResponse = HttpContext.Current.Response;
+            //         httpResponse.StatusCode = (int)HttpStatusCode.Accepted;
+            //         httpResponse.Write($"Initializing tenant");
+            //
+            //         HttpContext.Current.ApplicationInstance.CompleteRequest();
+            //     }
+            //     catch (Exception ex)
+            //     {
+            //         Debug.WriteLine("Application_BeginRequest EXCEPTION " + ex.Message);
+            //     }
+            // }
         }
 
         protected void Application_Error(Object sender, EventArgs e)

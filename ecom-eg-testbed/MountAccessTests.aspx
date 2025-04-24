@@ -16,11 +16,11 @@
                     AssociatedControlID="txtFolderPath"
                     CssClass="col-sm-3 col-form-label">Folder Path:</asp:Label>
                 <div class="col-sm-9">
-                    <div>C:\Mounts\Assets\{tenant ID}\{Asset Type}</div>
-                    <div>EG: C:\Mounts\Assets\TenantA\images</div>
+                    <div>C:\Mounts\Data\{tenant ID}\{Asset Type}</div>
+                    <div>EG: C:\Mounts\Data\TenantA\images</div>
                     <div>
                         <asp:TextBox ID="txtFolderPath" runat="server" Width="550"
-                            CssClass="form-control"></asp:TextBox>
+                            CssClass="form-control">C:\Mounts\Data\TenantA\images</asp:TextBox>
                     </div>
                 </div>
             </div>

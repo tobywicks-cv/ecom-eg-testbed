@@ -1,15 +1,4 @@
-﻿using Azure.Storage.Files.Shares.Models;
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Microsoft.Azure.Management.WebSites;
-using Microsoft.Identity.Client;
-using Microsoft.Rest;
+﻿using System;
 
 // Web config:
 // AzureTenantId
